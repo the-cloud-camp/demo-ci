@@ -19,4 +19,4 @@ jobs:
       env:
         DAY_OF_WEEK: Ped
       if: runner.os != 'Windows'
-      run: echo "The operating system on the runner is not Windows, it's $RUNNER_OS."   
+      run: echo "The operating $DAY_OF_WEEK system on the runner is not Windows, it's $RUNNER_OS."   
