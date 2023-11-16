@@ -3,13 +3,20 @@ run-name: Demo Activity
 
 on: [push]
 
+env:
+    DAY_OF_WEEK: Monday
+
 jobs:
   if-Windows-else:
-    runs-on: windows-2022
+    env:
+        DAY_OF_WEEK: Kai
+    runs-on: ubuntu-latest
     steps:
-    - name: condition 1 is Window os
-      if: runner.os == 'Windows'
-      run: echo "The operating system on the runner is $env:RUNNER_OS."
+    - name:  condition 1 is Window os
+    if: runner.os == 'Windows'
+    run: echo "The operating system on the runner is $env:RUNNER_OS."
     - name: condition 2
+    env:
+      DAY_OF_WEEK: Ped
       if: runner.os != 'Windows'
       run: echo "The operating system on the runner is not Windows, it's $RUNNER_OS."   
