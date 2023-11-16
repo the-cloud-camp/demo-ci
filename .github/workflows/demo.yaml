@@ -7,7 +7,7 @@ jobs:
   if-Windows-else:
     runs-on: macos-latest
     steps:
-    - name: condition 1
+    - name: condition 1 is Window os
       if: runner.os == 'Windows'
       run: echo "The operating system on the runner is $env:RUNNER_OS."
     - name: condition 2
